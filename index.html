@@ -4,13 +4,15 @@
 		<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.min.css" />
 	</head>
 	<body ng-controller="StoreController as anw">
-		<div  ng-repeat="data in anw.gegevens" >
+		<div  ng-repeat="data in anw.gegevens | limitTo: 4 | orderBy: '+geboortedatum'">
 			<h1>NAW-gegevens:</h1>
-			<h3>voornaam: {{data.voornaam;}}</h3>
+			<h3>voornaam: {{data.voornaam}}</h3>
 			<h3>tussenvoegsel: {{data.tussenvoegsel}}</h3>
 			<h3>achternaam: {{data.achternaam}}</h3>
-			<h3>geboortedatum: {{data.geboortedatum}}</h3>
-			<h3>woonplaats: {{data.woonplaats}}</h3>
+			<h3>geboortejaar: {{data.geboortejaar}}</h3>
+			<h3>woonplaats: {{data.woonplaats | uppercase | limitTo: 4}}</h3>
+			<h3>banksaldo: {{data.saldoBankrekening | currency: "&euro;"}}</h3>
+			<h3>geboortedatum: {{data.geboortedatum | date: "dd-MMM-yyyy" |lowercase}}</h3>
 			<button ng-show="data.klikOpMij">Klik mij</button>
 		</div>	
 	

@@ -12,18 +12,44 @@
 		voornaam: "Arjan",
 		tussenvoegsel: "de",
 		achternaam: "Ruijter",
-		geboortedatum: 1990,
+		geboortejaar: 1990,
 		woonplaats: "Castricum",
-		klikOpMij: false,
-		persoonBestaatNiet: false
+		klikOpMij: true,
+		persoonBestaatNiet: false,
+		saldoBankrekening: 78,
+		geboortedatum: "1968-08-30",
 	},
 	{
 		voornaam: "Louis",
 		tussenvoegsel: "van",
 		achternaam: "Gaal",
-		geboortedatum: 1890,
+		geboortejaar: 1890,
 		woonplaats: "Utrecht",
 		klikOpMij: true,
-		persoonBestaatNiet: false
+		persoonBestaatNiet: false,
+		saldoBankrekening: 123.45,
+		geboortedatum: "2005-08-03"
+	},
+	{
+		voornaam: "Robin",
+		tussenvoegsel: "van",
+		achternaam: "Persie",
+		geboortejaar: 1982,
+		woonplaats: "Rotterdam",
+		klikOpMij: true,
+		persoonBestaatNiet: false,
+		saldoBankrekening: 12000000.15,
+		geboortedatum: "1982-12-21"
+	},
+	{
+		voornaam: "Arjan",
+		tussenvoegsel: "",
+		achternaam: "Robben",
+		geboortejaar: 1982,
+		woonplaats: "Bedum",
+		klikOpMij: true,
+		persoonBestaatNiet: false,
+		saldoBankrekening: 23000000.01,
+		geboortedatum: "1984-01-23"
 	}];
 })();
