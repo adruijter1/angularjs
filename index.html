@@ -13,7 +13,29 @@
 			<h3>woonplaats: {{data.woonplaats | uppercase | limitTo: 4}}</h3>
 			<h3>banksaldo: {{data.saldoBankrekening | currency: "&euro;"}}</h3>
 			<h3>geboortedatum: {{data.geboortedatum | date: "dd-MMM-yyyy" |lowercase}}</h3>
+			<h4>Reviews</h4>
+				<blockquote ng-repeat="review in data.review">
+					
+						<select ng-model="review.stars">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select ng-model="review.body"><br>
+						<textarea ng-model="review.body"></textarea><br>
+						<label>by</label>
+						<input type="email" ng-model="review.author"/><br>
+						<input type="submit" value="submit" /><br>			
+					</form>
+					
+					<b>stars: {{ review.stars }}</b><br>
+					{{ review.body }}<br>
+					<cite>by: {{ review.author }}</cite>
+					<input type="checkbox"  ng-model="review.newsletter" />
+				</blockquote>			
 			<button ng-show="data.klikOpMij">Klik mij</button>
+			
 		</div>	
 	
 		<script type="text/javascript" src="angular.min.js"></script>
